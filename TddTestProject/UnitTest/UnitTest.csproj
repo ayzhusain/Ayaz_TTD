@@ -45,15 +45,26 @@
     </When>
     <Otherwise>
       <ItemGroup>
-        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework">
+          <Private>False</Private>
+        </Reference>
       </ItemGroup>
     </Otherwise>
   </Choose>
   <ItemGroup>
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UnitTest2Question7.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ConsoleApplicationQuestion7\Question7.csproj">
+      <Project>{1c42e7d5-34c2-44a4-b57c-c88091bd4609}</Project>
+      <Name>Question7</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TDDQuestion2\TDDQuestion2.csproj">
+      <Project>{2e015e07-9f07-4d51-a879-ea6641f14e9a}</Project>
+      <Name>TDDQuestion2</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TddTestProject\TddTestProject.csproj">
       <Project>{73e05be9-f678-43da-a795-d1def948e640}</Project>
       <Name>TddTestProject</Name>
